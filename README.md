@@ -82,6 +82,14 @@ function showPosts(data){
  });
 }
 </script>
-<script src="https://everydayhealthguide0047.blogspot.com/feeds/posts/default?alt=json-in-script&amp;max-results=10&amp;callback=showPosts"></script>
-</body>
-</html>
+<script 
+<script>
+(function(){
+  var s=document.createElement('script');
+  s.src='https://everydayhealthguide0047.blogspot.com/feeds/posts/default?alt=json-in-script&max-results=10&callback=showPosts';
+  s.onerror=function(){
+    document.getElementById('posts').textContent='Articles load nahi ho sake. Blogger feed settings check karein.';
+  };
+  document.body.appendChild(s);
+})();
+</script>
